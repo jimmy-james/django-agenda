@@ -85,6 +85,8 @@ class Event(models.Model):
 
     sites = models.ManyToManyField(Site)
     
+    facebook_event = models.BigIntegerField(_('Facebook'), blank=True, null=True)
+
     def save(self):
         super(Event, self).save()
         if not settings.DEBUG:
