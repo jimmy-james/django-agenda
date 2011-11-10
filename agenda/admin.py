@@ -24,7 +24,7 @@ class EventAdmin(admin.ModelAdmin):
 
     fieldsets =  ((None, {'fields': ['title', 'slug', 'event_date', 'start_time', 'end_time', 'location', 'description', 'calendar',]}),
                   (_('Advanced options'), {'classes' : ('collapse',),
-                                           'fields'  : ('publish_date', 'publish', 'sites', 'author', 'allow_comments')}))
+                                           'fields'  : ('publish_date', 'publish', 'sites', 'author', 'allow_comments', 'facebook_event',)}))
     
     # This is a dirty hack, this belongs inside of the model but defaults don't work on M2M
     def formfield_for_dbfield(self, db_field, **kwargs):
