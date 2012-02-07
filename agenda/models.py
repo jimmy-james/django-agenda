@@ -87,6 +87,8 @@ class Event(models.Model):
     
     facebook_event = models.BigIntegerField(_('Facebook'), blank=True, null=True)
 
+    image = models.ImageField(_(u"Image"), upload_to="uploads/events", blank=True, null=True)
+
     def save(self):
         super(Event, self).save()
         if not settings.DEBUG:

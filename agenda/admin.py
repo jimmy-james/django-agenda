@@ -22,7 +22,7 @@ class EventAdmin(admin.ModelAdmin):
     
     search_fields = ('title', 'location__title', 'author__username', 'author__first_name', 'author__last_name', 'calendar')        
 
-    fieldsets =  ((None, {'fields': ['title', 'slug', 'event_date', 'start_time', 'end_time', 'location', 'description', 'calendar',]}),
+    fieldsets =  ((None, {'fields': ['title', 'slug', 'event_date', 'start_time', 'end_time', 'location', 'description', 'calendar', 'image']}),
                   (_('Advanced options'), {'classes' : ('collapse',),
                                            'fields'  : ('publish_date', 'publish', 'sites', 'author', 'allow_comments', 'facebook_event',)}))
     
